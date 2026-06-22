@@ -56,4 +56,4 @@ docs/
 Add OG image at `public/og/cv666-bangladesh-og.jpg` (1200×630). See `docs/IMAGE_SEO_PLAN.md`.
 
 ## Domain
-Update `SITE_URL` in `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/cv666-game/page.tsx`, and `components/SchemaMarkup.tsx` before production deploy.
+Site URL: **https://ccv666.com** — configured in `lib/constants.ts` (`SITE_URL`).
