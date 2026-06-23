@@ -1,5 +1,6 @@
 import { LAST_UPDATED } from "@/lib/constants";
 import AppScreenshot from "./AppScreenshot";
+import AffiliateButton from "./AffiliateButton";
 
 const trustBadges = [
   "bKash & Nagad Ready",
@@ -21,7 +22,7 @@ export default function HeroSection() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="max-w-xl">
             <p className="mb-3 inline-block rounded-full bg-white/15 px-4 py-1 text-sm font-medium backdrop-blur">
-              Bangladesh · 2026 · Independent Guide
+              Bangladesh · 2026 · Official Link
             </p>
             <h1
               id="hero-heading"
@@ -52,15 +53,15 @@ export default function HeroSection() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#download" className="btn-primary bg-white text-accent-700 hover:bg-slate-100">
-                Download APK Guide
-              </a>
-              <a href="#deposit" className="btn-secondary border-white/30 bg-white/10 text-white hover:bg-white/20">
-                bKash Deposit Help
-              </a>
-              <a href="#troubleshooting" className="btn-secondary border-white/30 bg-white/10 text-white hover:bg-white/20">
-                Fix Problems
-              </a>
+              <AffiliateButton variant="hero-primary">
+                Download CV666 APK
+              </AffiliateButton>
+              <AffiliateButton variant="hero-secondary">
+                Register on CV666
+              </AffiliateButton>
+              <AffiliateButton variant="hero-secondary">
+                Login to CV666
+              </AffiliateButton>
             </div>
 
             <ul
@@ -79,8 +80,8 @@ export default function HeroSection() {
 
             <p className="mt-6 text-sm text-white/70">
               Last updated{" "}
-              <time dateTime={LAST_UPDATED}>22 June 2026</time> · Not affiliated
-              with CV666 — independent informational guide
+              <time dateTime={LAST_UPDATED}>22 June 2026</time> · Contains
+              affiliate links to the official CV666 platform
             </p>
           </div>
 

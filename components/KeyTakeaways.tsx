@@ -1,3 +1,5 @@
+import { AffiliateCtaRow } from "./AffiliateButton";
+
 export default function KeyTakeaways() {
   const takeaways = [
     {
@@ -43,6 +45,7 @@ export default function KeyTakeaways() {
             </div>
           ))}
         </dl>
+        <AffiliateCtaRow className="mt-6" />
         <p className="mt-4 text-xs text-accent-700">
           Last updated:{" "}
           <time dateTime="2026-06-22">22 June 2026</time> · Independent guide,

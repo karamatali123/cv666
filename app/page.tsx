@@ -23,6 +23,7 @@ import SiteLogo from "@/components/SiteLogo";
 import AppPreviewSection from "@/components/AppPreviewSection";
 import SkipLink from "@/components/SkipLink";
 import ArticleMeta from "@/components/ArticleMeta";
+import StickyAffiliateBar from "@/components/StickyAffiliateBar";
 import MobileNav from "@/components/MobileNav";
 import { LAST_UPDATED } from "@/lib/constants";
 
@@ -84,7 +85,7 @@ export default function HomePage() {
         <DisclaimerSection />
       </article>
 
-      <footer className="border-t border-slate-200 bg-slate-900 py-10 text-sm text-slate-400">
+      <footer className="border-t border-slate-200 bg-slate-900 py-10 pb-20 text-sm text-slate-400 md:pb-10">
         <div className="section-container">
           <p className="text-center">
             © 2026 CV666 Bangladesh Guide · Informational content only ·
@@ -104,6 +105,7 @@ export default function HomePage() {
           </nav>
         </div>
       </footer>
+      <StickyAffiliateBar />
     </>
   );
 }

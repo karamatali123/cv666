@@ -1,4 +1,5 @@
 import ScreenshotSlider from "./ScreenshotSlider";
+import { AffiliateCtaRow } from "./AffiliateButton";
 
 export default function AppPreviewSection() {
   return (
@@ -18,6 +19,8 @@ export default function AppPreviewSection() {
       <div className="mt-10">
         <ScreenshotSlider />
       </div>
+
+      <AffiliateCtaRow className="mt-10" center />
     </section>
   );
 }

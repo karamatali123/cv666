@@ -1,4 +1,5 @@
 import AppScreenshot from "./AppScreenshot";
+import { AffiliateCtaRow } from "./AffiliateButton";
 
 const depositMethods = [
   {
@@ -178,6 +179,8 @@ export default function DepositSection() {
           </tbody>
         </table>
       </div>
+
+      <AffiliateCtaRow className="mt-10" center />
     </section>
   );
 }

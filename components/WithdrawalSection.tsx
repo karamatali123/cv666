@@ -1,4 +1,5 @@
 import AppScreenshot from "./AppScreenshot";
+import { AffiliateCtaRow } from "./AffiliateButton";
 
 const withdrawalSteps = [
   "Open CV666 → Wallet → Withdraw",
@@ -144,6 +145,8 @@ export default function WithdrawalSection() {
           </tbody>
         </table>
       </div>
+
+      <AffiliateCtaRow className="mt-10" center />
     </section>
   );
 }

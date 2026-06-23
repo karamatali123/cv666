@@ -1,3 +1,5 @@
+import { AffiliateCtaRow } from "./AffiliateButton";
+
 export default function DisclaimerSection() {
   return (
     <section
@@ -15,8 +17,10 @@ export default function DisclaimerSection() {
           risk. All amounts mentioned in this article are in Bangladeshi Taka
           (BDT). Never deposit more than you can comfortably afford to lose.
           Results on prediction platforms are not guaranteed. Please play
-          responsibly.
+          responsibly. Download and register buttons on this site link to our
+          official CV666 affiliate partner at cv-666.info.
         </p>
+        <AffiliateCtaRow className="mt-6" center />
       </div>
     </section>
   );

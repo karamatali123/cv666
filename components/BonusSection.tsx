@@ -1,4 +1,5 @@
 import AppScreenshot from "./AppScreenshot";
+import { AffiliateCtaRow } from "./AffiliateButton";
 
 const bonuses = [
   {
@@ -64,6 +65,8 @@ export default function BonusSection() {
           <AppScreenshot image="slotBanner" showCaption={false} />
         </div>
       </div>
+
+      <AffiliateCtaRow className="mt-8" center />
 
       <p className="mt-8 text-sm text-slate-500">
         Bonus amounts are indicative based on common Bangladesh gaming app

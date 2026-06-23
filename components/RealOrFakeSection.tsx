@@ -1,3 +1,5 @@
+import { AffiliateCtaRow } from "./AffiliateButton";
+
 const pros = [
   {
     title: "Easy-to-Use Interface",
@@ -89,6 +91,8 @@ export default function RealOrFakeSection() {
         a reliable income source. Never deposit more than you can afford to
         lose.
       </p>
+
+      <AffiliateCtaRow className="mt-8" center />
     </section>
   );
 }

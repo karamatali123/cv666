@@ -1,4 +1,5 @@
 import AppScreenshot from "./AppScreenshot";
+import { AffiliateCtaRow } from "./AffiliateButton";
 
 const downloadSteps = [
   {
@@ -128,6 +129,8 @@ export default function DownloadGuide() {
           .
         </p>
       </aside>
+
+      <AffiliateCtaRow className="mt-10" center />
     </section>
   );
 }

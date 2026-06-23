@@ -2,6 +2,7 @@
 
 import { useState, useId } from "react";
 import { faqs } from "@/lib/faqs";
+import { AffiliateCtaRow } from "./AffiliateButton";
 
 export default function FaqSection() {
   const baseId = useId();
@@ -59,6 +60,8 @@ export default function FaqSection() {
           );
         })}
       </div>
+
+      <AffiliateCtaRow className="mt-10" center />
     </section>
   );
 }

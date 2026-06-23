@@ -1,3 +1,5 @@
+import { AffiliateCtaRow } from "./AffiliateButton";
+
 const registrationFields = [
   {
     field: "Phone Number",
@@ -58,6 +60,7 @@ export default function RegistrationGuide() {
           Clearing app cache or reinstalling the APK can resolve session errors
           on older Android devices.
         </p>
+        <AffiliateCtaRow className="mt-6" />
       </div>
     </section>
   );
