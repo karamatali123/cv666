@@ -83,19 +83,19 @@ export default function GamesSection() {
       aria-labelledby="games-heading"
     >
       <h2 id="games-heading" className="section-heading">
-        Games Available on CV666 APK
+        Games Available on 666rs APK
       </h2>
       <p className="section-subheading">
-        Popular titles on CV666 Bangladesh, with gameplay notes and risk levels.
+        Popular titles on 666rs Pakistan, with gameplay notes and risk levels.
       </p>
 
       <div className="mt-10 grid items-start gap-8 lg:grid-cols-3">
         <div className="flex flex-col items-center">
           <AppScreenshot image="appGames" showCaption={false} />
           <p className="mt-3 max-w-[260px] text-center text-sm text-slate-600">
-            CV666 app lobby shows Hot Games, Live, Sports, Poker, Fish,
+            666rs app lobby shows Hot Games, Live, Sports, Poker, Fish,
             Lottery, and more — all accessible from one Android APK in
-            Bangladesh.
+            Pakistan.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2">

@@ -1,97 +1,105 @@
+import Image from "next/image";
 import { LAST_UPDATED } from "@/lib/constants";
-import AppScreenshot from "./AppScreenshot";
+import { screenshots } from "@/lib/screenshots";
 import AffiliateButton from "./AffiliateButton";
 
-const trustBadges = [
-  "bKash & Nagad Ready",
-  "Step-by-Step Guides",
-  "Troubleshooting Help",
-  "Honest Reviews",
-  "Updated for 2026",
+const appInfo = [
+  { label: "Name", value: "666rs Game" },
+  { label: "Size", value: "40 MB" },
+  { label: "Version", value: "1.3" },
+  { label: "Update", value: "Today" },
 ];
 
-const paymentMethods = ["bKash", "Nagad", "Rocket", "Upay"];
+const trustPills = [
+  "🇵🇰 Pakistan",
+  "JazzCash",
+  "EasyPaisa",
+  "PKR Wallet",
+  "Android APK",
+];
 
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden bg-gradient-to-br from-accent-700 via-accent-600 to-brand-600 text-white"
+      className="gradient-hero section-block"
       aria-labelledby="hero-heading"
     >
-      <div className="section-container relative z-10 py-16 sm:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div className="max-w-xl">
-            <p className="mb-3 inline-block rounded-full bg-white/15 px-4 py-1 text-sm font-medium backdrop-blur">
-              Bangladesh · 2026 · Official Link
-            </p>
+      <div className="section-container relative z-10 pb-12 pt-8 sm:pb-16 sm:pt-10">
+        <div className="animate-fade-in flex flex-wrap gap-2">
+          {trustPills.map((pill) => (
+            <span key={pill} className="trust-pill">
+              {pill}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-8 grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="animate-slide-up">
             <h1
               id="hero-heading"
-              className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
+              className="text-balance text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl"
             >
-              CV666 Game Download APK (2026) – Official Bangladesh Guide
+              666rs Game Download (New Online Earning Game) 2026
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-white/90">
-              Everything you need to use CV666 in Bangladesh — APK download,
-              bKash &amp; Nagad deposit steps, withdrawal help, login fixes,
-              bonus rules, and an honest real-or-fake review. Written for
-              Android users in Dhaka, Chattogram, Sylhet, and across BD.
+
+            <p className="mt-4 text-sm leading-relaxed text-white/90 sm:text-base lg:text-lg">
+              666rs Game is an online gaming platform available in Pakistan. Play
+              slots, Teen Patti, Aviator, and live casino games. Deposit with
+              JazzCash &amp; EasyPaisa, win real PKR, and withdraw fast — all
+              from your Android phone.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2" role="list" aria-label="Supported payment methods">
-              {paymentMethods.map((method) => (
-                <span
-                  key={method}
-                  role="listitem"
-                  className="rounded-md bg-white/20 px-3 py-1 text-sm font-medium"
-                >
-                  {method}
-                </span>
-              ))}
-              <span className="rounded-md bg-white/20 px-3 py-1 text-sm font-medium">
-                BDT · Android 6.0+
-              </span>
+            <div className="btn-cta-row mt-6">
+              <AffiliateButton variant="download">
+                Download The App — Get RS 100
+              </AffiliateButton>
+              <AffiliateButton variant="hero-secondary">Register</AffiliateButton>
+              <AffiliateButton variant="hero-secondary">Login</AffiliateButton>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <AffiliateButton variant="hero-primary">
-                Download CV666 APK
-              </AffiliateButton>
-              <AffiliateButton variant="hero-secondary">
-                Register on CV666
-              </AffiliateButton>
-              <AffiliateButton variant="hero-secondary">
-                Login to CV666
-              </AffiliateButton>
-            </div>
-
-            <ul
-              className="mt-10 grid gap-3 sm:grid-cols-2"
-              aria-label="What this guide covers"
-            >
-              {trustBadges.map((badge) => (
-                <li key={badge} className="flex items-center gap-2 text-sm font-medium">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-400 text-xs text-green-900" aria-hidden="true">
-                    ✓
-                  </span>
-                  {badge}
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-6 text-sm text-white/70">
-              Last updated{" "}
-              <time dateTime={LAST_UPDATED}>22 June 2026</time> · Contains
-              affiliate links to the official CV666 platform
+            <p className="mt-5 text-xs text-white/60 sm:text-sm">
+              Updated{" "}
+              <time dateTime={LAST_UPDATED}>22 June 2026</time> · Official
+              affiliate link · 18+ only
             </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
-            <AppScreenshot image="welcomeBanner" priority showCaption={false} />
+          <div className="animate-slide-up flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[280px] sm:max-w-xs">
+              <div className="absolute -inset-3 rounded-3xl bg-white/10 blur-xl" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-slate-900/40 p-3 shadow-2xl backdrop-blur-sm">
+                <Image
+                  src={screenshots.heroPromo.src}
+                  alt={screenshots.heroPromo.alt}
+                  width={screenshots.heroPromo.width}
+                  height={screenshots.heroPromo.height}
+                  priority
+                  unoptimized
+                  className="mx-auto h-auto w-full max-w-full rounded-xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className="animate-slide-up mt-10 overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-lg backdrop-blur-sm">
+          <table className="info-table w-full">
+            <caption className="sr-only">666rs Game app information</caption>
+            <tbody>
+              {appInfo.map((row) => (
+                <tr key={row.label}>
+                  <th scope="row" className="!bg-white/10 !text-white">
+                    {row.label}
+                  </th>
+                  <td className="!border-white/10 !bg-white/5 !text-white">
+                    {row.value}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/5" aria-hidden="true" />
-      <div className="absolute -bottom-10 -left-10 h-48 w-48 rounded-full bg-white/5" aria-hidden="true" />
     </section>
   );
 }

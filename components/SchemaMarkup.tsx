@@ -1,10 +1,11 @@
 import { faqs } from "@/lib/faqs";
-import { SITE_URL, LAST_UPDATED, PUBLISHED_DATE } from "@/lib/constants";
+import { SITE_URL, LAST_UPDATED, PUBLISHED_DATE, AFFILIATE_URL } from "@/lib/constants";
 import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, SITE_NAME } from "@/lib/seo";
 import { screenshots } from "@/lib/screenshots";
+import { PAGE_SECTIONS } from "@/lib/sections";
 
 const LOGO_URL = `${SITE_URL}${screenshots.logo.src}`;
-const OG_IMAGE = `${SITE_URL}${screenshots.welcomeBanner.src}`;
+const OG_IMAGE = `${SITE_URL}${screenshots.heroPromo.src}`;
 
 export default function SchemaMarkup() {
   const graph = {
@@ -16,7 +17,7 @@ export default function SchemaMarkup() {
         url: SITE_URL,
         name: SITE_NAME,
         description: DEFAULT_DESCRIPTION,
-        inLanguage: "en-BD",
+        inLanguage: "en-PK",
         publisher: { "@id": `${SITE_URL}#organization` },
       },
       {
@@ -31,7 +32,7 @@ export default function SchemaMarkup() {
           height: screenshots.logo.height,
         },
         description:
-          "Independent informational guide for CV666 Game Bangladesh APK download, payments, and reviews.",
+          "Independent informational guide for 666rs Game Pakistan APK download, payments, and reviews.",
       },
       {
         "@type": "WebPage",
@@ -44,12 +45,12 @@ export default function SchemaMarkup() {
         primaryImageOfPage: {
           "@type": "ImageObject",
           url: OG_IMAGE,
-          width: screenshots.welcomeBanner.width,
-          height: screenshots.welcomeBanner.height,
+          width: screenshots.heroPromo.width,
+          height: screenshots.heroPromo.height,
         },
         datePublished: PUBLISHED_DATE,
         dateModified: LAST_UPDATED,
-        inLanguage: "en-BD",
+        inLanguage: "en-PK",
       },
       {
         "@type": "Article",
@@ -63,48 +64,52 @@ export default function SchemaMarkup() {
         publisher: { "@id": `${SITE_URL}#organization` },
         mainEntityOfPage: { "@id": SITE_URL },
         articleSection: "Gaming",
-        inLanguage: "en-BD",
+        inLanguage: "en-PK",
         keywords:
-          "CV666 Game, CV666 APK, CV666 Bangladesh, bKash, Nagad, APK download",
+          "666rs Game, 666rs APK, 666rs Pakistan, JazzCash, EasyPaisa, APK download",
       },
       {
         "@type": "SoftwareApplication",
         "@id": `${SITE_URL}#software`,
-        name: "CV666 Game",
+        name: "666rs Game",
         applicationCategory: "GameApplication",
         operatingSystem: "Android",
         offers: {
           "@type": "Offer",
           price: "0",
-          priceCurrency: "BDT",
+          priceCurrency: "PKR",
         },
         description:
-          "CV666 Game Android APK for Bangladesh users with bKash, Nagad, and Rocket payment support.",
-        downloadUrl: `${SITE_URL}#download`,
-        screenshot: `${SITE_URL}${screenshots.appGames.src}`,
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "CV666 Game Bangladesh Guide",
-            item: SITE_URL,
-          },
+          "666rs Game Android APK for Pakistan users with JazzCash, EasyPaisa, and Bank Transfer payment support.",
+        downloadUrl: AFFILIATE_URL,
+        screenshot: [
+          `${SITE_URL}${screenshots.appGames.src}`,
+          `${SITE_URL}${screenshots.heroPromo.src}`,
         ],
       },
       {
+        "@type": "ItemList",
+        "@id": `${SITE_URL}#toc`,
+        name: "666rs Game Pakistan Guide Table of Contents",
+        numberOfItems: PAGE_SECTIONS.length,
+        itemListElement: PAGE_SECTIONS.map((section, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: section.label,
+          url: `${SITE_URL}#${section.id}`,
+        })),
+      },
+      {
         "@type": "HowTo",
-        name: "How to Download and Install CV666 APK in Bangladesh",
+        name: "How to Download and Install 666rs APK in Pakistan",
         description:
-          "Step-by-step guide to download CV666 Game APK on Android and register with a Bangladesh phone number.",
+          "Step-by-step guide to download 666rs Game APK on Android and register with a Pakistan phone number.",
         step: [
           {
             "@type": "HowToStep",
             position: 1,
-            name: "Download CV666 APK",
-            text: "Obtain the CV666 APK from an official source and save to your Android device.",
+            name: "Download 666rs APK",
+            text: "Obtain the 666rs APK from an official source and save to your Android device.",
           },
           {
             "@type": "HowToStep",
@@ -116,33 +121,33 @@ export default function SchemaMarkup() {
             "@type": "HowToStep",
             position: 3,
             name: "Install and Register",
-            text: "Tap the APK to install, open CV666, register with your phone number and OTP.",
+            text: "Tap the APK to install, open 666rs, register with your phone number and OTP.",
           },
           {
             "@type": "HowToStep",
             position: 4,
-            name: "Deposit via bKash or Nagad",
-            text: "Make your first BDT deposit using bKash, Nagad, or Rocket to activate your wallet.",
+            name: "Deposit via JazzCash or EasyPaisa",
+            text: "Make your first PKR deposit using JazzCash, EasyPaisa, or Bank Transfer to activate your wallet.",
           },
         ],
       },
       {
         "@type": "HowTo",
-        name: "How to Withdraw from CV666 via bKash in Bangladesh",
+        name: "How to Withdraw from 666rs via JazzCash in Pakistan",
         description:
-          "Withdraw BDT winnings from CV666 Game to your bKash or Nagad wallet.",
+          "Withdraw PKR winnings from 666rs Game to your JazzCash or EasyPaisa wallet.",
         step: [
           {
             "@type": "HowToStep",
             position: 1,
             name: "Open Withdrawal Menu",
-            text: "Go to CV666 Wallet → Withdraw and select bKash or Nagad.",
+            text: "Go to 666rs Wallet → Withdraw and select JazzCash or EasyPaisa.",
           },
           {
             "@type": "HowToStep",
             position: 2,
             name: "Enter Amount and Confirm",
-            text: "Enter BDT amount above minimum threshold and verify your wallet number.",
+            text: "Enter PKR amount above minimum threshold and verify your wallet number.",
           },
           {
             "@type": "HowToStep",

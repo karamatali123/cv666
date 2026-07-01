@@ -5,9 +5,9 @@ import { screenshots } from "@/lib/screenshots";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: SITE_NAME,
-    short_name: "CV666 BD",
+    short_name: "666rs",
     description:
-      "CV666 Game Bangladesh APK download, bKash & Nagad guides, and honest reviews.",
+      "666rs Game download for Pakistan — slots, Teen Patti, JazzCash & EasyPaisa deposits.",
     start_url: "/",
     display: "standalone",
     background_color: "#004a37",

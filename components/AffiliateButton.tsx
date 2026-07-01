@@ -1,10 +1,16 @@
 import { AFFILIATE_URL } from "@/lib/constants";
 
-type Variant = "primary" | "secondary" | "hero-primary" | "hero-secondary";
+type Variant =
+  | "primary"
+  | "secondary"
+  | "download"
+  | "hero-primary"
+  | "hero-secondary";
 
 const variants: Record<Variant, string> = {
   primary: "btn-primary",
   secondary: "btn-secondary",
+  download: "btn-download",
   "hero-primary":
     "btn-primary bg-white text-accent-700 hover:bg-slate-100",
   "hero-secondary":
@@ -43,11 +49,11 @@ export function AffiliateCtaRow({
 }) {
   return (
     <div
-      className={`flex flex-wrap gap-3 ${center ? "justify-center" : ""} ${className}`.trim()}
+      className={`btn-cta-row ${center ? "sm:justify-center" : ""} ${className}`.trim()}
     >
-      <AffiliateButton>Download CV666 APK</AffiliateButton>
-      <AffiliateButton variant="secondary">Register on CV666</AffiliateButton>
-      <AffiliateButton variant="secondary">Login to CV666</AffiliateButton>
+      <AffiliateButton variant="download">Download The App Get RS 100</AffiliateButton>
+      <AffiliateButton variant="secondary">Register</AffiliateButton>
+      <AffiliateButton variant="secondary">Login</AffiliateButton>
     </div>
   );
 }

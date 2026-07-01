@@ -2,7 +2,7 @@ const relatedGames = [
   {
     name: "92PKR Game",
     description:
-      "Popular Bangladesh APK with bKash deposits and color prediction games.",
+      "Popular Pakistan APK with JazzCash deposits and color prediction games.",
   },
   {
     name: "Basant Club",
@@ -12,32 +12,32 @@ const relatedGames = [
   {
     name: "Dream99",
     description:
-      "Prediction gaming app commonly searched alongside CV666 in Bangladesh.",
+      "Prediction gaming app commonly searched alongside 666rs in Pakistan.",
   },
   {
     name: "Yay Win",
     description:
-      "Mobile gaming APK with Nagad withdrawal and referral bonus system.",
+      "Mobile gaming APK with EasyPaisa withdrawal and referral bonus system.",
   },
   {
     name: "GoGo Rummy",
     description:
-      "Rummy-focused platform for Bangladesh players who prefer card games.",
+      "Rummy-focused platform for Pakistan players who prefer card games.",
   },
   {
     name: "Lucky Win",
     description:
-      "Slot and prediction games with low minimum deposit in BDT.",
+      "Slot and prediction games with low minimum deposit in PKR.",
   },
   {
     name: "BD222 Game",
     description:
-      "Bangladesh-targeted gaming APK with Rocket and bKash integration.",
+      "Pakistan-targeted gaming APK with Bank Transfer and JazzCash integration.",
   },
   {
     name: "Fiewin",
     description:
-      "Color prediction app with similar mechanics to CV666 Bangladesh.",
+      "Color prediction app with similar mechanics to 666rs Pakistan.",
   },
 ];
 
@@ -49,11 +49,11 @@ export default function RelatedGames() {
       aria-labelledby="related-games-heading"
     >
       <h2 id="related-games-heading" className="section-heading">
-        Related Games in Bangladesh
+        Related Games in Pakistan
       </h2>
       <p className="section-subheading">
-        Other gaming APKs Bangladesh users often compare with CV666 Game when
-        searching for bKash-friendly platforms.
+        Other gaming APKs Pakistan users often compare with 666rs Game when
+        searching for JazzCash-friendly platforms.
       </p>
 
       <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -70,13 +70,13 @@ export default function RelatedGames() {
       <p className="mt-6 text-sm text-slate-500">
         Comparing alternatives? Read our{" "}
         <a href="#real-or-fake" className="font-medium text-brand-600 hover:underline">
-          CV666 real or fake review
+          666rs real or fake review
         </a>{" "}
         and{" "}
         <a href="#safety-tips" className="font-medium text-brand-600 hover:underline">
           safety tips
         </a>{" "}
-        before trying any Bangladesh gaming APK.
+        before trying any Pakistan gaming APK.
       </p>
     </section>
   );

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { screenshots } from "@/lib/screenshots";
 
-const LOGO_SRC = "/og/screenshots/cv666-logo.jpeg";
 const LOGO_SIZE = 36;
 
 type SiteLogoProps = {
@@ -20,8 +20,8 @@ export default function SiteLogo({
   const content = (
     <>
       <Image
-        src={LOGO_SRC}
-        alt="CV666 Game official logo — Bangladesh gaming APK"
+        src={screenshots.logo.src}
+        alt={screenshots.logo.alt}
         width={size}
         height={size}
         unoptimized
@@ -29,8 +29,8 @@ export default function SiteLogo({
         priority
       />
       {showText && (
-        <span className="text-lg font-bold text-accent-600">
-          CV666 BD Guide
+        <span className="text-lg font-bold text-slate-900">
+          666rs Game
         </span>
       )}
     </>
@@ -40,7 +40,7 @@ export default function SiteLogo({
 
   if (href) {
     return (
-      <Link href={href} className={classes} aria-label="CV666 Bangladesh Guide home">
+      <Link href={href} className={classes} aria-label="666rs Pakistan Guide home">
         {content}
       </Link>
     );

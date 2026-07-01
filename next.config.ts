@@ -24,6 +24,16 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/666rs-game",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/666rs-game/:path*",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -3,76 +3,137 @@ import { AffiliateCtaRow } from "./AffiliateButton";
 
 const bonuses = [
   {
-    title: "Welcome Bonus",
-    amount: "100–500 BDT (varies)",
-    description:
-      "New CV666 Bangladesh users may receive a welcome bonus on their first deposit. Common structures include a percentage match (e.g., 20–50% of deposit) or fixed BDT credit. Welcome bonuses usually carry wagering requirements—you must bet the bonus amount a set number of times before withdrawal. Read terms in the Promotions tab before depositing.",
+    title: "1. Invitation Bonus",
+    what: "Rs 200 + Rs 800 + Rs 2000 for every friend who joins and deposits.",
+    steps: [
+      "Share your referral link/code with friends.",
+      "When they sign up and deposit money, you earn rewards per friend.",
+    ],
+    example: "Invite 5 friends = up to 15,000 PKR in bonuses!",
+    tip: "Post your referral link on WhatsApp or Instagram to invite more buddies!",
   },
   {
-    title: "Referral Rewards",
-    amount: "Commission-based",
-    description:
-      "Share your CV666 referral code with friends in Bangladesh. When they register and deposit, you may earn a percentage of their activity or a flat BDT reward per qualified referral. Commission rates and minimum payout thresholds change periodically. Referral income is not guaranteed and depends on referred users' continued activity.",
+    title: "2. Weekly Bonus",
+    what: "Free spins, extra coins, or cash rewards every 7 days.",
+    steps: [
+      "Play games daily to stay active.",
+      "On the 7th day, claim your bonus from the \"Rewards\" section.",
+    ],
+    example: "Week 1 = 2 free spins; Week 2 = 500 PKR cash!",
+    tip: "Log in daily to avoid missing the weekly reward!",
   },
   {
-    title: "Daily Login Bonus",
-    amount: "10–50 BDT (typical)",
-    description:
-      "Open CV666 Game daily to collect login rewards. Consecutive-day streaks may unlock larger bonuses on day 7 or day 30. Missing a day often resets the streak. Daily bonuses may be credited as non-withdrawable balance until wagering conditions are met.",
+    title: "3. Monthly Sharing Bonus",
+    what: "A share of a special bonus pool based on your activity that month.",
+    steps: [
+      "Play games and invite friends throughout the month.",
+      "The more active you are, the bigger your share!",
+    ],
+    example: "Top players get up to 5,000 PKR!",
+    tip: "Participate in tournaments to boost your monthly score!",
   },
   {
-    title: "VIP Rewards",
-    amount: "Tier-based benefits",
-    description:
-      "High-volume players may qualify for VIP tiers with perks such as faster withdrawal processing, dedicated support, birthday bonuses, and exclusive tournament access. VIP status is typically based on cumulative deposit or betting volume over 30–90 days. Benefits vary and are subject to platform discretion.",
+    title: "4. First Deposit Bonus",
+    what: "20% extra coins on your first-ever deposit.",
+    steps: [
+      "Add money to your account for the first time (min. 500 PKR).",
+      "Instantly get 20% bonus coins!",
+    ],
+    example: "Deposit 1,000 PKR → Get 200 PKR free (Total: 1,200 PKR!)",
+  },
+  {
+    title: "5. Redeem Codes",
+    what: "Free spins, bonus cash, or exclusive game access.",
+    steps: [
+      "Find codes on 666rs social media or during events.",
+      "Enter the code in the \"Rewards\" section to claim prizes.",
+    ],
+    example: "Code \"BONUS500\" = 500 PKR for slot games!",
+    tip: "Follow 666rs online to grab codes before they expire!",
+  },
+  {
+    title: "6. Daily Lucky Draw",
+    what: "Spin a virtual wheel daily for prizes like cash, coins, or free bets.",
+    steps: [
+      "Play games to earn \"lucky points\".",
+      "Use points to spin the wheel once a day.",
+    ],
+    example: "Spin and win 1,000 PKR instantly!",
+  },
+  {
+    title: "7. Login Rewards",
+    what: "Daily rewards for logging in!",
+    steps: [
+      "Day 1: 50 coins",
+      "Day 3: 1 free spin",
+      "Day 7: 200 PKR cash!",
+    ],
+    tip: "Don't miss a day — rewards get better over time!",
+  },
+  {
+    title: "8. Tournament Bonuses",
+    what: "Compete in weekly/monthly tournaments for big prizes.",
+    steps: [
+      "Join events like \"Slots Champion\" or \"Teen Patti Master\".",
+      "Top players win cash, gadgets, or VIP perks.",
+    ],
+    example: "Win a brand-new phone in the summer tournament!",
   },
 ];
 
 export default function BonusSection() {
   return (
     <section
-      id="bonus"
-      className="section-container bg-white"
-      aria-labelledby="bonus-heading"
+      id="bonuses"
+      className="section-block-muted"
+      aria-labelledby="bonuses-heading"
     >
-      <h2 id="bonus-heading" className="section-heading">
-        CV666 Bonus 2026 – Bangladesh Offers
+      <div className="section-container">
+      <h2 id="bonuses-heading" className="section-heading">
+        666rs Game: All Bonuses Explained in Detail!
       </h2>
       <p className="section-subheading">
-        Welcome bonus, referral rewards, daily login, and VIP programs on CV666
-        Game.
+        666rs Game is packed with exciting bonuses to boost your fun and
+        rewards! Let&apos;s break them down in simple terms:
       </p>
 
-      <div className="mt-10 grid items-start gap-8 lg:grid-cols-3">
-        <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2">
-        {bonuses.map((bonus) => (
-          <article key={bonus.title} className="card">
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-base font-semibold text-slate-900">
-                {bonus.title}
-              </h3>
-              <span className="shrink-0 rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-800">
-                {bonus.amount}
-              </span>
+      <div className="mt-8 grid items-start gap-8 lg:grid-cols-3">
+        <div className="prose-content max-w-none lg:col-span-2">
+          {bonuses.map((bonus) => (
+            <div key={bonus.title}>
+              <h3>{bonus.title}</h3>
+              <p>
+                <strong>What You Get:</strong> {bonus.what}
+              </p>
+              <p>
+                <strong>How It Works:</strong>
+              </p>
+              <ol>
+                {bonus.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
+              {bonus.example && (
+                <p>
+                  <strong>Example:</strong> {bonus.example}
+                </p>
+              )}
+              {bonus.tip && (
+                <p>
+                  <strong>Pro Tip:</strong> {bonus.tip}
+                </p>
+              )}
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600">
-              {bonus.description}
-            </p>
-          </article>
-        ))}
+          ))}
         </div>
-        <div className="flex justify-center">
-          <AppScreenshot image="slotBanner" showCaption={false} />
+        <div className="flex flex-col items-center gap-6">
+          <AppScreenshot image="inviteBonus" showCaption={false} />
+          <AppScreenshot image="referralGuide" showCaption={false} />
         </div>
       </div>
 
       <AffiliateCtaRow className="mt-8" center />
-
-      <p className="mt-8 text-sm text-slate-500">
-        Bonus amounts are indicative based on common Bangladesh gaming app
-        patterns in 2026. Actual offers on CV666 may differ. No bonus
-        guarantees profit—wagering requirements and expiry dates apply.
-      </p>
+      </div>
     </section>
   );
 }

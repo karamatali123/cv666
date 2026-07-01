@@ -1,45 +1,38 @@
 export const screenshots = {
   logo: {
-    src: "/og/screenshots/cv666-logo.jpeg",
+    src: "/og/screenshots/666rs-logo.jpeg",
     width: 225,
     height: 225,
-    alt: "CV666 Game official logo with playing cards — Bangladesh gaming APK 2026",
-    caption: "CV666 Game official branding",
+    alt: "666rs Game official logo with red plane and gold 666RS branding — Pakistan 2026",
+    caption: "666rs Game official branding",
   },
-  apkPromo: {
-    src: "/og/screenshots/cv666-apk-promo.jpeg",
-    width: 183,
-    height: 275,
-    alt: "CV666 APK download promo showing slots, poker, roulette and Android app for Bangladesh",
-    caption: "CV666 APK — slots, cards, and casino games on Android",
-  },
-  welcomeBanner: {
-    src: "/og/screenshots/cv666-welcome-banner.jpeg",
-    width: 285,
-    height: 177,
-    alt: "CV666 Game welcome banner — Play and Win on CV666 Bangladesh",
-    caption: "Welcome to CV666 — play and win on mobile",
+  heroPromo: {
+    src: "/og/screenshots/666rs-hero-promo.jpeg",
+    width: 422,
+    height: 726,
+    alt: "666rs Game Pakistan promo — login with +92, JazzCash & EasyPaisa, play and win real cash",
+    caption: "666rs Game — play, win, and earn real cash in Pakistan",
   },
   appGames: {
-    src: "/og/screenshots/cv666-app-games.jpeg",
-    width: 259,
-    height: 194,
-    alt: "CV666 app interface showing popular game types — Hot Games, Live, Sports, Poker, Lottery on Android",
-    caption: "CV666 app home screen with game categories",
+    src: "/og/screenshots/666rs-app-games.jpeg",
+    width: 395,
+    height: 776,
+    alt: "666rs app home screen with Aviator, slots, sports betting, and PKR wallet for Pakistan players",
+    caption: "666rs app — hot games, sports, and PKR wallet",
   },
-  slotBanner: {
-    src: "/og/screenshots/cv666-slot-banner.jpeg",
-    width: 318,
-    height: 159,
-    alt: "CV666 Bangladesh complete entertainment betting platform with slot games and casino features",
-    caption: "CV666 — full entertainment and betting experience",
+  inviteBonus: {
+    src: "/og/screenshots/666rs-invite-bonus.jpeg",
+    width: 168,
+    height: 300,
+    alt: "666rs invite friends bonus — Rs 200 + Rs 800 + Rs 2000 rewards for Pakistan referrals",
+    caption: "Invite friends and earn Rs 200 + 800 + 2000 on 666rs",
   },
-  roulettePromo: {
-    src: "/og/screenshots/cv666-roulette-promo.jpeg",
-    width: 318,
-    height: 159,
-    alt: "CV666 Game roulette, mobile app and casino chips — why players choose CV666 Bangladesh",
-    caption: "CV666 mobile app with roulette and live casino games",
+  referralGuide: {
+    src: "/og/screenshots/666rs-referral-guide.jpeg",
+    width: 362,
+    height: 484,
+    alt: "666rs referral program — share invite link, friend registers, get bonus in Pakistan",
+    caption: "666rs referral guide — share link, register, earn bonus",
   },
 } as const;
 
@@ -48,10 +41,9 @@ export type ScreenshotKey = keyof typeof screenshots;
 export const screenshotKeys = Object.keys(screenshots) as ScreenshotKey[];
 
 export const sliderScreenshots: ScreenshotKey[] = [
-  "welcomeBanner",
+  "heroPromo",
   "appGames",
-  "apkPromo",
+  "inviteBonus",
+  "referralGuide",
   "logo",
-  "slotBanner",
-  "roulettePromo",
 ];

@@ -13,7 +13,7 @@ export default function ArticleMeta() {
         Last updated{" "}
         <time dateTime={LAST_UPDATED}>22 June 2026</time>
         {" · "}
-        By CV666 Bangladesh Guide · Independent review
+        By 666rs Pakistan Guide · Independent review
       </p>
     </div>
   );

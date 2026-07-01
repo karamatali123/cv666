@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteMetadata } from "@/lib/seo";
@@ -11,13 +11,23 @@ const inter = Inter({
 
 export const metadata: Metadata = siteMetadata;
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#005a42" },
+    { media: "(prefers-color-scheme: dark)", color: "#003d2e" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-BD" className={inter.variable}>
+    <html lang="en-PK" className={inter.variable}>
       <body className="min-h-screen font-sans">{children}</body>
     </html>
   );

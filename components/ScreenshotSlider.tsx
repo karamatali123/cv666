@@ -35,7 +35,7 @@ export default function ScreenshotSlider() {
       className="mx-auto w-full max-w-lg"
       role="region"
       aria-roledescription="carousel"
-      aria-label="CV666 app screenshots"
+      aria-label="666rs app screenshots"
     >
       <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-900 shadow-lg">
         <div
@@ -68,7 +68,7 @@ export default function ScreenshotSlider() {
         <button
           type="button"
           onClick={prev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2.5 text-slate-800 shadow-md transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-500"
+          className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-slate-800 shadow-md transition hover:bg-white active:scale-95"
           aria-label="Previous screenshot"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -79,7 +79,7 @@ export default function ScreenshotSlider() {
         <button
           type="button"
           onClick={next}
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2.5 text-slate-800 shadow-md transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-500"
+          className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-slate-800 shadow-md transition hover:bg-white active:scale-95"
           aria-label="Next screenshot"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

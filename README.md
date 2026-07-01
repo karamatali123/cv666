@@ -1,12 +1,6 @@
-# CV666 Bangladesh – Next.js SEO Landing Page
+# 666rs Game Pakistan – Next.js SEO Landing Page
 
-Production-ready Next.js App Router landing page for CV666 Game (Bangladesh market, 2026).
-
-## Stack
-- Next.js 15 (App Router)
-- TypeScript
-- Tailwind CSS
-- Static generation / Server Components
+Production-ready Next.js landing page for **666rs Game** (Pakistan market, 2026).
 
 ## Run
 
@@ -15,45 +9,18 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000/cv666-game](http://localhost:3000/cv666-game)
+Open [http://localhost:3000](http://localhost:3000)
 
-## Structure
+## Config (`lib/constants.ts`)
 
-```
-app/
-├── cv666-game/page.tsx    # Main SEO landing page
-├── layout.tsx
-├── page.tsx               # Home hub
-├── globals.css
-├── sitemap.ts
-└── robots.ts
+| Variable | Value |
+|----------|-------|
+| `SITE_URL` | https://666rs.com |
+| `AFFILIATE_URL` | https://666rs2fs.com/s/C34E036160 |
 
-components/
-├── HeroSection.tsx
-├── QuickInfoTable.tsx
-├── WhatIsCV666.tsx
-├── HowItWorks.tsx
-├── FeaturesSection.tsx
-├── GamesSection.tsx
-├── DepositSection.tsx
-├── WithdrawalSection.tsx
-├── DownloadGuide.tsx
-├── RegistrationGuide.tsx
-├── BonusSection.tsx
-├── RealOrFakeSection.tsx
-├── UserReviews.tsx
-├── RelatedGames.tsx
-├── FaqSection.tsx
-├── DisclaimerSection.tsx
-└── SchemaMarkup.tsx
+## Pakistan market
+- Currency: **PKR**
+- Payments: **JazzCash**, **EasyPaisa**, **SadaPay**, Bank Transfer
+- Locale: `en-PK`
 
-docs/
-├── IMAGE_SEO_PLAN.md
-└── INTERNAL_LINKING_STRATEGY.md
-```
-
-## SEO Assets
-Add OG image at `public/og/cv666-bangladesh-og.jpg` (1200×630). See `docs/IMAGE_SEO_PLAN.md`.
-
-## Domain
-Site URL: **https://ccv666.com** — configured in `lib/constants.ts` (`SITE_URL`).
+Brand strings: `lib/brand.ts`

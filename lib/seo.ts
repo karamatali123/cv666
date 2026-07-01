@@ -2,36 +2,36 @@ import type { Metadata } from "next";
 import { SITE_URL, LAST_UPDATED, PUBLISHED_DATE } from "./constants";
 import { screenshots } from "./screenshots";
 
-export const SITE_NAME = "CV666 Bangladesh Guide";
+export const SITE_NAME = "666rs Game";
 export const DEFAULT_TITLE =
-  "CV666 Game 2026 – Official Bangladesh APK Download Guide";
+  "666rs Game Download (New Online Earning Game) 2026";
 export const DEFAULT_DESCRIPTION =
-  "CV666 Bangladesh guide: APK download, bKash & Nagad deposit/withdrawal steps, login fixes, bonuses, troubleshooting & honest 2026 review for BD players.";
+  "Download 666rs Game APK for Pakistan 2026. Register with +92 phone, deposit via JazzCash & EasyPaisa, play slots & Teen Patti, claim Rs 100 bonus, and withdraw real PKR winnings fast.";
 
 export const SEO_KEYWORDS = [
-  "CV666 Game",
-  "CV666 APK",
-  "CV666 Download",
-  "CV666 Login",
-  "CV666 Bangladesh",
-  "CV666 Review Bangladesh",
-  "CV666 Real or Fake",
-  "CV666 Bonus 2026",
-  "CV666 Registration",
-  "CV666 bKash Withdrawal",
-  "CV666 Nagad Withdrawal",
-  "CV666 Rocket Deposit",
-  "CV666 Withdrawal Time",
-  "CV666 Deposit Guide Bangladesh",
-  "What is CV666 Game Bangladesh",
-  "How to withdraw from CV666",
-  "Is CV666 safe in Bangladesh",
-  "How to register CV666 APK",
-  "CV666 deposit not credited",
-  "CV666 withdrawal pending",
+  "666rs Game",
+  "666rs APK",
+  "666rs Download",
+  "666rs Login",
+  "666rs Pakistan",
+  "666rs Review Pakistan",
+  "666rs Real or Fake",
+  "666rs Bonus 2026",
+  "666rs Registration",
+  "666rs JazzCash Withdrawal",
+  "666rs EasyPaisa Withdrawal",
+  "666rs SadaPay Deposit",
+  "666rs Withdrawal Time",
+  "666rs Deposit Guide Pakistan",
+  "What is 666rs Game Pakistan",
+  "How to withdraw from 666rs",
+  "Is 666rs safe in Pakistan",
+  "How to register 666rs APK",
+  "666rs deposit not credited",
+  "666rs withdrawal pending",
 ];
 
-const OG_IMAGE = screenshots.welcomeBanner;
+const OG_IMAGE = screenshots.heroPromo;
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -68,13 +68,13 @@ export const siteMetadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
     languages: {
-      "en-BD": SITE_URL,
+      "en-PK": SITE_URL,
       "en": SITE_URL,
     },
   },
   openGraph: {
     type: "article",
-    locale: "en_BD",
+    locale: "en_PK",
     url: SITE_URL,
     siteName: SITE_NAME,
     title: DEFAULT_TITLE,
@@ -103,8 +103,46 @@ export const siteMetadata: Metadata = {
     images: [OG_IMAGE.src],
   },
   other: {
-    "geo.region": "BD",
-    "geo.placename": "Bangladesh",
-    "content-language": "en-BD",
+    "geo.region": "PK",
+    "geo.placename": "Pakistan",
+    "content-language": "en-PK",
   },
 };
+
+export function createPageMetadata(
+  title: string,
+  description: string,
+  path: string
+): Metadata {
+  const url = `${SITE_URL}${path}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_PK",
+      url,
+      siteName: SITE_NAME,
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      images: [
+        {
+          url: OG_IMAGE.src,
+          width: OG_IMAGE.width,
+          height: OG_IMAGE.height,
+          alt: OG_IMAGE.alt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      images: [OG_IMAGE.src],
+    },
+  };
+}

@@ -12,13 +12,13 @@ export default function DisclaimerSection() {
           Disclaimer
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-slate-700">
-          This article is written for informational purposes only. CV666 Game
+          This article is written for informational purposes only. 666rs Game
           and all similar prediction and lottery platforms involve real financial
-          risk. All amounts mentioned in this article are in Bangladeshi Taka
-          (BDT). Never deposit more than you can comfortably afford to lose.
+          risk. All amounts mentioned in this article are in Pakistani Rupee
+          (PKR). Never deposit more than you can comfortably afford to lose.
           Results on prediction platforms are not guaranteed. Please play
           responsibly. Download and register buttons on this site link to our
-          official CV666 affiliate partner at cv-666.info.
+          official 666rs affiliate partner at 666rs2fs.com.
         </p>
         <AffiliateCtaRow className="mt-6" center />
       </div>

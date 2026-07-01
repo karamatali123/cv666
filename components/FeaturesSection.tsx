@@ -1,48 +1,80 @@
-const features = [
+const featureBlocks = [
   {
-    title: "Fast Withdrawals",
-    description:
-      "CV666 Bangladesh advertises quick payout processing through bKash, Nagad, and Rocket. Most user reports suggest withdrawals complete within 10 to 60 minutes under normal conditions. First-time withdrawals or amounts above daily limits may require extra verification, which can extend wait times. Always withdraw to a wallet number registered in your own name to reduce rejection risk.",
+    icon: "🎰",
+    title: "Fun Games for Everyone!",
+    intro: "666rs Game has 5+ types of games to keep you entertained:",
+    items: [
+      "Slots: Spin colorful wheels to win coins!",
+      "Teen Patti: Play this classic card game with friends or strangers.",
+      "Aviator: Crash-style game popular with Pakistan players.",
+      "Lottery: Try your luck to win big prizes!",
+      "Sports Betting: Guess sports results and earn rewards.",
+    ],
   },
   {
-    title: "Mobile Friendly UI",
-    description:
-      "The CV666 APK is designed for budget Android phones common across Bangladesh. Navigation uses large tap targets, simple menus, and quick access to deposit, withdrawal, and game lobbies. The interface loads reasonably well on 4G connections, though performance may vary on older devices with limited RAM. Portrait mode is the default layout for most games.",
+    icon: "🎁",
+    title: "Free Daily Bonuses!",
+    intro: "Every day you log in, you get FREE rewards on 666rs Game:",
+    items: [
+      "Daily Login Bonus: Coins, spins, or cash for just opening the app!",
+      "Lucky Draw: Spin a virtual wheel daily for surprise prizes.",
+      "Redeem Codes: Use secret codes to unlock freebies!",
+    ],
   },
   {
-    title: "Referral System",
-    description:
-      "CV666 Game includes a referral program where existing users share a unique invite code. When new players register using that code and make qualifying deposits, the referrer may earn commission or bonus balance. Referral rates and payout thresholds change periodically. Treat referral income as uncertain rather than guaranteed, and avoid spamming invite links on social media.",
+    icon: "👥",
+    title: "Earn with Friends!",
+    intro: "Invite your buddies to join the fun and earn together:",
+    items: [
+      "Invite Bonus: Get Rs 200 + Rs 800 + Rs 2000 when friends sign up and deposit.",
+      "Monthly Sharing Bonus: The more friends you invite, the bigger your share!",
+    ],
   },
   {
-    title: "Daily Rewards",
-    description:
-      "Daily login bonuses reward users who open the app consecutively. Rewards may include small BDT credits, free spins, or discount vouchers on deposits. Missing a day often resets the streak. These bonuses typically carry wagering requirements before withdrawal. Check the promotions tab for current daily reward schedules and terms.",
+    icon: "⭐",
+    title: "Big Rewards for New Players!",
+    intro: "New to 666rs? Here's a warm welcome:",
+    items: [
+      "First Deposit Bonus: Get 20% extra coins on your first deposit.",
+      "Weekly Bonus: Active players earn free spins or cash every 7 days!",
+    ],
   },
   {
-    title: "Low Deposit Entry",
-    description:
-      "CV666 Bangladesh supports relatively low minimum deposits compared to international platforms, often starting around 100 to 200 BDT depending on the payment channel. This low entry point makes the app accessible to students and casual players, but it also increases the risk of frequent small losses adding up over time. Set a personal budget before depositing.",
+    icon: "🔒",
+    title: "Safe & Easy to Play!",
+    items: [
+      "Sign up with just a phone number.",
+      "Secure JazzCash, EasyPaisa, and bank transfers.",
+      "24/7 support via in-app chat.",
+    ],
   },
   {
-    title: "Bangladesh Payment Support",
-    description:
-      "Native integration with bKash, Nagad, Rocket, and sometimes local bank transfer sets CV666 apart from foreign gaming apps that do not support MFS. Deposits and withdrawals happen in BDT without currency conversion fees. Users should only use official in-app payment channels and avoid sending money to personal numbers shared in unofficial Telegram groups.",
+    icon: "📲",
+    title: "Play Anywhere, Anytime!",
+    items: [
+      "Lightweight 40 MB app.",
+      "Works on Android 6.0+.",
+      "Simple design with bright buttons.",
+    ],
   },
   {
-    title: "Secure Login",
-    description:
-      "CV666 login uses phone number and password authentication, with OTP verification during registration and sometimes during password resets. Enable any available security options in settings. Never share your password or OTP with third parties. If you suspect unauthorized access, change your password immediately and contact support through official in-app channels.",
+    icon: "💰",
+    title: "Fair Prizes & Fast Withdrawals!",
+    items: [
+      "Instant wins credited to your account.",
+      "Cash out to JazzCash, EasyPaisa, or bank.",
+      "Fair play systems for all users.",
+    ],
   },
   {
-    title: "Promotions & Events",
-    description:
-      "Seasonal promotions around Eid, Pohela Boishakh, and cricket tournaments are common on Bangladesh gaming platforms. CV666 may offer deposit match bonuses, leaderboard prizes, or limited-time game multipliers during these events. Read promotion terms carefully—wagering multiples and expiry dates often apply before bonus funds become withdrawable.",
+    icon: "🛡️",
+    title: "Safety and Security",
+    text: "666rs prioritizes user safety with advanced security for personal information and financial transactions.",
   },
   {
+    icon: "💬",
     title: "Customer Support",
-    description:
-      "In-app chat, WhatsApp, and Telegram channels are typical support options for CV666 Bangladesh. Response times vary from minutes to several hours. For deposit or withdrawal issues, have your TrxID, registered phone number, and screenshot of the transaction ready. Avoid unofficial support accounts that request your login credentials or upfront fees to release withdrawals.",
+    text: "24/7 customer support through in-app chat, WhatsApp, and Telegram for any issues or questions.",
   },
 ];
 
@@ -50,27 +82,54 @@ export default function FeaturesSection() {
   return (
     <section
       id="features"
-      className="section-container bg-white"
+      className="section-block-muted"
       aria-labelledby="features-heading"
     >
-      <h2 id="features-heading" className="section-heading">
-        CV666 Game Features for Bangladesh Users
-      </h2>
-      <p className="section-subheading">
-        What CV666 APK offers in terms of payments, rewards, and usability.
-      </p>
+      <div className="section-container">
+        <h2 id="features-heading" className="section-heading">
+          666rs Game: Detailed Features Explained!
+        </h2>
+        <p className="section-subheading">
+          Let&apos;s break down what makes 666rs Game so special! Here are its
+          coolest features in simple words:
+        </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature) => (
-          <article key={feature.title} className="card">
-            <h3 className="text-base font-semibold text-slate-900">
-              {feature.title}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate-600">
-              {feature.description}
-            </p>
-          </article>
-        ))}
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:gap-5">
+          {featureBlocks.map((block) => (
+            <article key={block.title} className="card-interactive">
+              <div className="flex items-start gap-4">
+                <span className="feature-icon" aria-hidden="true">
+                  {block.icon}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-base font-bold text-slate-900 sm:text-lg">
+                    {block.title}
+                  </h3>
+                  {block.intro && (
+                    <p className="mt-2 text-sm text-slate-600">{block.intro}</p>
+                  )}
+                  {block.text && (
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {block.text}
+                    </p>
+                  )}
+                  {block.items && (
+                    <ul className="mt-3 space-y-1.5 text-sm text-slate-600">
+                      {block.items.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="text-brand-500" aria-hidden="true">
+                            ✓
+                          </span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,22 +1,22 @@
 const problems = [
   {
-    problem: "CV666 deposit not credited after bKash payment",
+    problem: "666rs deposit not credited after JazzCash payment",
     causes: [
       "TrxID entered incorrectly or with extra spaces",
-      "Sent amount does not match the exact BDT shown in app",
+      "Sent amount does not match the exact PKR shown in app",
       "Payment sent to an old/expired agent number (screenshot scam)",
-      "Server overload during peak evening hours (7–11 PM BD time)",
+      "Server overload during peak evening hours (7–11 PM PK time)",
     ],
     fix: [
       "Wait 30–60 minutes before contacting support",
-      "Open bKash → History and copy the exact TrxID again",
+      "Open JazzCash → History and copy the exact TrxID again",
       "Take a screenshot showing recipient number, amount, and TrxID",
-      "Contact in-app support with your CV666 ID, TrxID, and screenshot",
+      "Contact in-app support with your 666rs ID, TrxID, and screenshot",
       "Do NOT send a second payment unless support explicitly asks",
     ],
   },
   {
-    problem: "CV666 withdrawal pending for hours",
+    problem: "666rs withdrawal pending for hours",
     causes: [
       "First-time withdrawal requires manual verification",
       "Active bonus with incomplete wagering requirements",
@@ -25,29 +25,29 @@ const problems = [
     ],
     fix: [
       "Check Promotions tab for unfinished bonus wagering",
-      "Verify your bKash/Nagad number in Profile settings",
+      "Verify your JazzCash/EasyPaisa number in Profile settings",
       "Note your withdrawal request ID from the app history",
       "Contact support after 2 hours with request ID and registered phone",
       "Avoid third-party 'fast withdrawal agents' — they are common scams",
     ],
   },
   {
-    problem: "CV666 login failed or session expired",
+    problem: "666rs login failed or session expired",
     causes: [
-      "Wrong phone number format (use 01XXXXXXXXX without +880)",
+      "Wrong phone number format (use 03XXXXXXXXX without +92)",
       "Outdated APK version no longer supported by server",
       "App cache corrupted after phone restart or storage cleanup",
       "Account temporarily locked after multiple wrong password attempts",
     ],
     fix: [
       "Use Forgot Password and verify via OTP",
-      "Download the latest CV666 APK from a trusted source",
-      "Clear app cache: Settings → Apps → CV666 → Clear Cache",
+      "Download the latest 666rs APK from a trusted source",
+      "Clear app cache: Settings → Apps → 666rs → Clear Cache",
       "If still locked, wait 30 minutes or contact support with your number",
     ],
   },
   {
-    problem: "CV666 APK won't install on Android",
+    problem: "666rs APK won't install on Android",
     causes: [
       "'Install unknown apps' permission not enabled for your browser",
       "Insufficient storage space (APK needs ~100 MB free)",
@@ -71,11 +71,11 @@ export default function TroubleshootingSection() {
       aria-labelledby="troubleshooting-heading"
     >
       <h2 id="troubleshooting-heading" className="section-heading">
-        Fix Common CV666 Problems (Bangladesh)
+        Fix Common 666rs Problems (Pakistan)
       </h2>
       <p className="section-subheading">
         Practical solutions for deposit delays, withdrawal holds, login errors,
-        and APK installation issues reported by CV666 Bangladesh users.
+        and APK installation issues reported by 666rs Pakistan users.
       </p>
 
       <div className="mt-10 space-y-8">
@@ -114,7 +114,7 @@ export default function TroubleshootingSection() {
       <p className="mt-8 text-sm text-slate-600">
         Still stuck? Check our{" "}
         <a href="#faq" className="font-medium text-brand-600 hover:underline">
-          CV666 FAQ section
+          666rs FAQ section
         </a>{" "}
         or review the{" "}
         <a
@@ -123,7 +123,7 @@ export default function TroubleshootingSection() {
         >
           withdrawal guide
         </a>{" "}
-        for step-by-step bKash and Nagad instructions.
+        for step-by-step JazzCash and EasyPaisa instructions.
       </p>
     </section>
   );

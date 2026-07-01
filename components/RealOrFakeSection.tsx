@@ -3,7 +3,7 @@ import { AffiliateCtaRow } from "./AffiliateButton";
 const pros = [
   {
     title: "Easy-to-Use Interface",
-    text: "CV666 APK features a simple layout suited for first-time users on budget Android phones. Navigation to deposit, games, and withdrawal sections is straightforward without complex menus.",
+    text: "666rs APK features a simple layout suited for first-time users on budget Android phones. Navigation to deposit, games, and withdrawal sections is straightforward without complex menus.",
   },
   {
     title: "Quick Signup Process",
@@ -11,7 +11,7 @@ const pros = [
   },
   {
     title: "Local Payment Integration",
-    text: "bKash, Nagad, and Rocket support makes CV666 accessible to Bangladesh users who do not have international payment cards. All transactions happen in BDT.",
+    text: "JazzCash, EasyPaisa, and Bank Transfer support makes 666rs accessible to Pakistan users who do not have international payment cards. All transactions happen in PKR.",
   },
   {
     title: "Variety of Games",
@@ -30,11 +30,11 @@ const cons = [
   },
   {
     title: "No Formal Regulation",
-    text: "CV666 Game is not licensed by Bangladesh's official gaming regulatory bodies. There is limited legal recourse if deposits are lost or accounts are blocked without clear explanation.",
+    text: "666rs Game is not licensed by Pakistan's official gaming regulatory bodies. There is limited legal recourse if deposits are lost or accounts are blocked without clear explanation.",
   },
   {
     title: "Scam & Fake APK Concerns",
-    text: "Fake CV666 APKs circulate on social media and Telegram. Unofficial agents may promise guaranteed withdrawals for upfront fees. Verification holds and bonus terms can prevent withdrawal of perceived winnings.",
+    text: "Fake 666rs APKs circulate on social media and Telegram. Unofficial agents may promise guaranteed withdrawals for upfront fees. Verification holds and bonus terms can prevent withdrawal of perceived winnings.",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function RealOrFakeSection() {
       aria-labelledby="real-or-fake-heading"
     >
       <h2 id="real-or-fake-heading" className="section-heading">
-        CV666 Real or Fake? – Honest Bangladesh Review
+        666rs Real or Fake? – Honest Pakistan Review
       </h2>
       <p className="section-subheading">
-        Balanced analysis of CV666 Game based on common user experiences in
-        Bangladesh. No income guarantees.
+        Balanced analysis of 666rs Game based on common user experiences in
+        Pakistan. No income guarantees.
       </p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -83,11 +83,11 @@ export default function RealOrFakeSection() {
       </div>
 
       <p className="mt-8 rounded-lg bg-slate-100 p-4 text-sm leading-relaxed text-slate-700">
-        <strong>Bottom line:</strong> CV666 Game appears to function as a
-        working gaming platform for many Bangladesh users who successfully
-        deposit and withdraw via bKash and Nagad. However, it operates in an
+        <strong>Bottom line:</strong> 666rs Game appears to function as a
+        working gaming platform for many Pakistan users who successfully
+        deposit and withdraw via JazzCash and EasyPaisa. However, it operates in an
         unregulated space with documented complaints about delays and account
-        issues across similar apps. Treat CV666 as high-risk entertainment—not
+        issues across similar apps. Treat 666rs as high-risk entertainment—not
         a reliable income source. Never deposit more than you can afford to
         lose.
       </p>

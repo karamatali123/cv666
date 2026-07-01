@@ -11,57 +11,64 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="section-container"
+      className="section-block-alt"
       aria-labelledby="faq-heading"
     >
-      <h2 id="faq-heading" className="section-heading">
-        CV666 Game FAQ – Bangladesh
-      </h2>
-      <p className="section-subheading">
-        17 detailed answers about CV666 download, bKash withdrawal, Nagad
-        deposits, login issues, bonuses, and safety in Bangladesh.
-      </p>
+      <div className="section-container">
+        <h2 id="faq-heading" className="section-heading">
+          666rs Game FAQ – Pakistan
+        </h2>
+        <p className="section-subheading">
+          Answers about 666rs download, JazzCash withdrawal, EasyPaisa deposits,
+          login issues, bonuses, and safety in Pakistan.
+        </p>
 
-      <div className="mt-10 divide-y divide-slate-200 rounded-xl border border-slate-200 bg-white">
-        {faqs.map((faq, index) => {
-          const isOpen = openIndex === index;
-          const buttonId = `${baseId}-button-${index}`;
-          const panelId = `${baseId}-panel-${index}`;
+        <div className="mt-8 divide-y divide-slate-100 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            const buttonId = `${baseId}-button-${index}`;
+            const panelId = `${baseId}-panel-${index}`;
 
-          return (
-            <div key={faq.question}>
-              <h3>
-                <button
-                  id={buttonId}
-                  type="button"
-                  className="flex w-full items-center justify-between px-5 py-4 text-left text-base font-medium text-slate-900 hover:bg-slate-50"
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
+            return (
+              <div key={faq.question}>
+                <h3 className="m-0">
+                  <button
+                    id={buttonId}
+                    type="button"
+                    className="flex min-h-[52px] w-full items-center justify-between gap-4 px-4 py-4 text-left text-sm font-semibold text-slate-900 transition hover:bg-brand-50 sm:px-5 sm:text-base"
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                  >
+                    <span>{faq.question}</span>
+                    <span
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700 transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                      aria-hidden="true"
+                    >
+                      ▼
+                    </span>
+                  </button>
+                </h3>
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
+                  className="px-4 pb-4 sm:px-5"
                 >
-                  {faq.question}
-                  <span className="ml-4 shrink-0 text-brand-600" aria-hidden="true">
-                    {isOpen ? "−" : "+"}
-                  </span>
-                </button>
-              </h3>
-              <div
-                id={panelId}
-                role="region"
-                aria-labelledby={buttonId}
-                hidden={!isOpen}
-                className="px-5 pb-4"
-              >
-                <p className="text-sm leading-relaxed text-slate-600">
-                  {faq.answer}
-                </p>
+                  <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      <AffiliateCtaRow className="mt-10" center />
+        <AffiliateCtaRow className="mt-8" center />
+      </div>
     </section>
   );
 }
