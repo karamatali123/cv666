@@ -27,10 +27,10 @@ export default function ContactUsPage() {
         For questions about articles, guides, or corrections on this website,
         email us at{" "}
         <a
-          href="mailto:contact@666rs.com"
+          href="mailto:contact@666rsgames.pk"
           className="font-medium text-brand-700 hover:underline"
         >
-          contact@666rs.com
+          contact@666rsgames.pk
         </a>
         . We aim to respond within 2–5 business days.
       </p>

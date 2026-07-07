@@ -111,10 +111,10 @@ export default function TermsAndConditionsPage() {
         </a>{" "}
         page or email{" "}
         <a
-          href="mailto:contact@666rs.com"
+          href="mailto:contact@666rsgames.pk"
           className="font-medium text-brand-700 hover:underline"
         >
-          contact@666rs.com
+          contact@666rsgames.pk
         </a>
         .
       </p>

@@ -82,10 +82,10 @@ export default function PrivacyPolicyPage() {
         Depending on your location, you may have rights to access, correct, or
         delete personal data we hold. Contact us at{" "}
         <a
-          href="mailto:contact@666rs.com"
+          href="mailto:contact@666rsgames.pk"
           className="font-medium text-brand-700 hover:underline"
         >
-          contact@666rs.com
+          contact@666rsgames.pk
         </a>{" "}
         to make a request.
       </p>

@@ -15,7 +15,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 | Variable | Value |
 |----------|-------|
-| `SITE_URL` | https://666rs.com |
+| `SITE_URL` | https://666rsgames.pk |
 | `AFFILIATE_URL` | https://666rs2fs.com/s/C34E036160 |
 
 ## Pakistan market
