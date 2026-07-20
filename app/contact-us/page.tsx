@@ -3,18 +3,23 @@ import ContentPageLayout from "@/components/ContentPageLayout";
 import AffiliateButton from "@/components/AffiliateButton";
 import { BRAND_NAME } from "@/lib/brand";
 import { createPageMetadata } from "@/lib/seo";
+import { getSitePage } from "@/lib/site-pages";
+
+const page = getSitePage("/contact-us")!;
 
 export const metadata: Metadata = createPageMetadata(
-  "Contact Us",
-  "Contact 666rs Game Pakistan guide for questions about APK download, JazzCash deposits, withdrawals, and account help.",
-  "/contact-us"
+  page.title,
+  page.description,
+  page.path,
+  { keywords: [...page.keywords] }
 );
 
 export default function ContactUsPage() {
   return (
     <ContentPageLayout
-      title="Contact Us"
+      title={page.title}
       description="Get in touch with questions about this 666rs guide or find official app support channels."
+      path={page.path}
     >
       <p>
         Thank you for visiting the {BRAND_NAME} Pakistan guide. If you have

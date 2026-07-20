@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: SITE_NAME,
     short_name: "666rs",
     description:
-      "666rs Game download for Pakistan — slots, Teen Patti, JazzCash & EasyPaisa deposits.",
+      "Download 666rs APK for Pakistan — register, claim Rs 100 bonus, deposit via JazzCash & EasyPaisa, play Teen Patti & slots, withdraw PKR.",
     start_url: "/",
     display: "standalone",
     background_color: "#004a37",

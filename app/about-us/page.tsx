@@ -3,18 +3,23 @@ import ContentPageLayout from "@/components/ContentPageLayout";
 import { BRAND_NAME, BRAND_COUNTRY, PAYMENT_METHODS } from "@/lib/brand";
 import { LAST_UPDATED } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/seo";
+import { getSitePage } from "@/lib/site-pages";
+
+const page = getSitePage("/about-us")!;
 
 export const metadata: Metadata = createPageMetadata(
-  "About Us",
-  "Learn about 666rs Game Pakistan guide — our mission, what we cover, and how we help players download, deposit, and play safely.",
-  "/about-us"
+  page.title,
+  page.description,
+  page.path,
+  { keywords: [...page.keywords] }
 );
 
 export default function AboutUsPage() {
   return (
     <ContentPageLayout
-      title="About Us"
+      title={page.title}
       description={`Independent guide helping ${BRAND_COUNTRY} players understand ${BRAND_NAME}, APK download, payments, and bonuses.`}
+      path={page.path}
     >
       <p>
         Welcome to the {BRAND_NAME} Pakistan guide. We are an independent
@@ -58,7 +63,7 @@ export default function AboutUsPage() {
       </p>
 
       <p className="text-sm text-slate-500">
-        Last updated: <time dateTime={LAST_UPDATED}>22 June 2026</time>
+        Last updated: <time dateTime={LAST_UPDATED}>13 July 2026</time>
       </p>
     </ContentPageLayout>
   );

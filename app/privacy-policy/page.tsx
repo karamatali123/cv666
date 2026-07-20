@@ -3,18 +3,23 @@ import ContentPageLayout from "@/components/ContentPageLayout";
 import { BRAND_NAME } from "@/lib/brand";
 import { LAST_UPDATED, SITE_URL } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/seo";
+import { getSitePage } from "@/lib/site-pages";
+
+const page = getSitePage("/privacy-policy")!;
 
 export const metadata: Metadata = createPageMetadata(
-  "Privacy Policy",
-  "Read the 666rs Game Pakistan guide privacy policy — how we handle data, cookies, affiliate links, and your information.",
-  "/privacy-policy"
+  page.title,
+  page.description,
+  page.path,
+  { keywords: [...page.keywords] }
 );
 
 export default function PrivacyPolicyPage() {
   return (
     <ContentPageLayout
-      title="Privacy Policy"
+      title={page.title}
       description={`How ${BRAND_NAME} Pakistan guide collects, uses, and protects information when you visit this website.`}
+      path={page.path}
     >
       <p>
         This Privacy Policy explains how we handle information when you visit{" "}
@@ -98,7 +103,7 @@ export default function PrivacyPolicyPage() {
       </p>
 
       <p className="text-sm text-slate-500">
-        Effective date: <time dateTime={LAST_UPDATED}>22 June 2026</time>
+        Effective date: <time dateTime={LAST_UPDATED}>13 July 2026</time>
       </p>
     </ContentPageLayout>
   );

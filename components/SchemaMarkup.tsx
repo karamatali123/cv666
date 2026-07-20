@@ -1,6 +1,6 @@
 import { faqs } from "@/lib/faqs";
 import { SITE_URL, LAST_UPDATED, PUBLISHED_DATE, AFFILIATE_URL } from "@/lib/constants";
-import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, SITE_NAME } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, SITE_NAME, SEO_KEYWORDS } from "@/lib/seo";
 import { screenshots } from "@/lib/screenshots";
 import { PAGE_SECTIONS } from "@/lib/sections";
 
@@ -65,8 +65,7 @@ export default function SchemaMarkup() {
         mainEntityOfPage: { "@id": SITE_URL },
         articleSection: "Gaming",
         inLanguage: "en-PK",
-        keywords:
-          "666rs Game, 666rs APK, 666rs Pakistan, JazzCash, EasyPaisa, APK download",
+        keywords: SEO_KEYWORDS.join(", "),
       },
       {
         "@type": "SoftwareApplication",

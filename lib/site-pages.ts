@@ -7,35 +7,76 @@ export const FOOTER_LINKS = [
   { href: "/#faq", label: "FAQ" },
 ] as const;
 
-export const LEGAL_PAGES = [
+export type SitePage = {
+  path: string;
+  title: string;
+  description: string;
+  keywords: string[];
+};
+
+export const LEGAL_PAGES: readonly SitePage[] = [
   {
     path: "/about-us",
     title: "About Us",
     description:
-      "Learn about 666rs Game Pakistan guide — our mission, what we cover, and how we help players download, deposit, and play safely.",
+      "Learn about the 666rs Game Pakistan guide — our mission, APK download help, JazzCash deposits, bonuses, and safe play tips for Pakistani players.",
+    keywords: [
+      "666rs about us",
+      "666rs Pakistan guide",
+      "666rs independent review",
+      "666rs Game information",
+    ],
   },
   {
     path: "/contact-us",
     title: "Contact Us",
     description:
-      "Contact 666rs Game Pakistan guide for questions about APK download, JazzCash deposits, withdrawals, and account help.",
+      "Contact the 666rs Game Pakistan guide for APK download help, JazzCash deposit issues, withdrawal questions, and account support resources.",
+    keywords: [
+      "666rs contact",
+      "666rs support Pakistan",
+      "666rs help",
+      "666rs customer service",
+    ],
   },
   {
     path: "/privacy-policy",
     title: "Privacy Policy",
     description:
-      "Read the 666rs Game Pakistan guide privacy policy — how we handle data, cookies, affiliate links, and your information.",
+      "666rs Game Pakistan guide privacy policy — how we collect, use, and protect your data, cookies, analytics, and affiliate link disclosures.",
+    keywords: [
+      "666rs privacy policy",
+      "666rs data protection",
+      "666rs cookies",
+      "666rs website privacy",
+    ],
   },
   {
     path: "/disclaimer",
     title: "Disclaimer",
     description:
-      "666rs Game Pakistan guide disclaimer — affiliate disclosure, gaming risks, and important legal notices for players.",
+      "666rs Game Pakistan guide disclaimer — affiliate disclosure, gaming risk warnings, legal notices, and important information for players.",
+    keywords: [
+      "666rs disclaimer",
+      "666rs affiliate disclosure",
+      "666rs gaming risks",
+      "666rs legal notice",
+    ],
   },
   {
     path: "/terms-and-conditions",
     title: "Terms and Conditions",
     description:
-      "Terms and conditions for using the 666rs Game Pakistan guide website, content, and affiliate links.",
+      "Terms and conditions for using the 666rs Game Pakistan guide website, including content usage, affiliate links, and user responsibilities.",
+    keywords: [
+      "666rs terms and conditions",
+      "666rs website terms",
+      "666rs user agreement",
+      "666rs guide rules",
+    ],
   },
 ] as const;
+
+export function getSitePage(path: string): SitePage | undefined {
+  return LEGAL_PAGES.find((page) => page.path === path);
+}

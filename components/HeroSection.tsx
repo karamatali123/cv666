@@ -39,7 +39,7 @@ export default function HeroSection() {
               id="hero-heading"
               className="text-balance text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl"
             >
-              666rs Game Download (New Online Earning Game) 2026
+              666rs Game Download APK Pakistan 2026 | Bonus &amp; Login
             </h1>
 
             <p className="mt-4 text-sm leading-relaxed text-white/90 sm:text-base lg:text-lg">

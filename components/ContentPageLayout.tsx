@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PageSchema from "./PageSchema";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import SkipLink from "./SkipLink";
@@ -6,16 +7,23 @@ import SkipLink from "./SkipLink";
 type ContentPageLayoutProps = {
   title: string;
   description?: string;
+  path?: string;
   children: React.ReactNode;
 };
 
 export default function ContentPageLayout({
   title,
   description,
+  path,
   children,
 }: ContentPageLayoutProps) {
+  const schemaDescription = description ?? title;
+
   return (
     <>
+      {path && (
+        <PageSchema title={title} description={schemaDescription} path={path} />
+      )}
       <SkipLink />
       <SiteHeader />
 

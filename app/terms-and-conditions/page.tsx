@@ -3,18 +3,23 @@ import ContentPageLayout from "@/components/ContentPageLayout";
 import { BRAND_NAME } from "@/lib/brand";
 import { LAST_UPDATED, SITE_URL } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/seo";
+import { getSitePage } from "@/lib/site-pages";
+
+const page = getSitePage("/terms-and-conditions")!;
 
 export const metadata: Metadata = createPageMetadata(
-  "Terms and Conditions",
-  "Terms and conditions for using the 666rs Game Pakistan guide website, content, and affiliate links.",
-  "/terms-and-conditions"
+  page.title,
+  page.description,
+  page.path,
+  { keywords: [...page.keywords] }
 );
 
 export default function TermsAndConditionsPage() {
   return (
     <ContentPageLayout
-      title="Terms and Conditions"
+      title={page.title}
       description={`Rules and conditions for accessing and using the ${BRAND_NAME} Pakistan guide website.`}
+      path={page.path}
     >
       <p>
         These Terms and Conditions (&quot;Terms&quot;) govern your use of{" "}
@@ -120,7 +125,7 @@ export default function TermsAndConditionsPage() {
       </p>
 
       <p className="text-sm text-slate-500">
-        Last updated: <time dateTime={LAST_UPDATED}>22 June 2026</time>
+        Last updated: <time dateTime={LAST_UPDATED}>13 July 2026</time>
       </p>
     </ContentPageLayout>
   );

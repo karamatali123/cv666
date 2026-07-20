@@ -11,7 +11,7 @@ export default function ArticleMeta() {
         <time dateTime={PUBLISHED_DATE}>15 January 2026</time>
         {" · "}
         Last updated{" "}
-        <time dateTime={LAST_UPDATED}>22 June 2026</time>
+        <time dateTime={LAST_UPDATED}>13 July 2026</time>
         {" · "}
         By 666rs Pakistan Guide · Independent review
       </p>

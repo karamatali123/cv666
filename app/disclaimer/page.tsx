@@ -3,18 +3,23 @@ import ContentPageLayout from "@/components/ContentPageLayout";
 import { BRAND_NAME } from "@/lib/brand";
 import { LAST_UPDATED } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/seo";
+import { getSitePage } from "@/lib/site-pages";
+
+const page = getSitePage("/disclaimer")!;
 
 export const metadata: Metadata = createPageMetadata(
-  "Disclaimer",
-  "666rs Game Pakistan guide disclaimer — affiliate disclosure, gaming risks, and important legal notices for players.",
-  "/disclaimer"
+  page.title,
+  page.description,
+  page.path,
+  { keywords: [...page.keywords] }
 );
 
 export default function DisclaimerPage() {
   return (
     <ContentPageLayout
-      title="Disclaimer"
+      title={page.title}
       description={`Important legal notices, affiliate disclosure, and risk warnings for ${BRAND_NAME} Pakistan users.`}
+      path={page.path}
     >
       <p>
         Please read this disclaimer carefully before using this website or
@@ -88,7 +93,7 @@ export default function DisclaimerPage() {
       </p>
 
       <p className="text-sm text-slate-500">
-        Last updated: <time dateTime={LAST_UPDATED}>22 June 2026</time>
+        Last updated: <time dateTime={LAST_UPDATED}>13 July 2026</time>
       </p>
     </ContentPageLayout>
   );
